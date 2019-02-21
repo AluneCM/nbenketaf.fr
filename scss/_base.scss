@@ -1,0 +1,337 @@
+body:before,
+body:after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: $yellow;
+}
+
+
+
+body {
+  font-family: 'ocp-regular';
+  font-size: 13px;
+  border-left: 2px solid $yellow;
+  border-right: 2px solid $yellow;
+  height: 100%;
+  // background-color: $dark-duck;
+  z-index: 99999
+}
+
+@media screen and (max-width: 600px) {
+  body {
+      font-size: 10px
+  }
+}
+
+.dark-theme {
+  background-color: $dark-duck;
+
+  .num, .line:hover .text, .status-bar.bar-left, .status-bar.bar-right {
+    background-color: $medium-duck;
+  }
+
+  .line:hover .num, .status-bar.bar-left.inactive {
+    background-color: $dark-duck;
+  }
+}
+
+.light-theme {
+  background-color: $light-sand;
+
+  .num, .line:hover .text, .status-bar.bar-left, .status-bar.bar-right {
+    background-color: $medium-sand;
+  }
+
+  .line:hover .num, .status-bar.bar-left.inactive {
+    background-color: $light-sand;
+  }
+}
+
+
+.green { color: $green }
+.pink { color: $pink }
+.yellow { color: $yellow }
+.purple { color: $purple; }
+.blue { color: $blue; }
+.medium-grey { color: $medium-grey; }
+.red { color: $red }
+.orange { color: $orange }
+
+
+.text-grey {
+  color: $medium-grey;
+}
+
+p {
+  margin: 0;
+  color: $blue;
+}
+
+p.green {
+  color: $neon-green;
+}
+
+.wrap {
+  min-height: 100vh;
+  overflow: auto
+}
+
+.wrap:after {
+  content: "";
+  display: block;
+  height: 20px
+}
+
+
+span.bold {
+	font-family: ocp-bold
+}
+
+a {
+    color: $medium-grey;
+    text-decoration: none
+}
+
+a:focus {
+    outline: none
+}
+
+.mobile-toggle {
+    display: none
+}
+
+@media screen and (max-width: 1024px) {
+    .mobile-toggle {
+        display: block
+    }
+    .desktop-toggle {
+        display: none
+    }
+}
+
+
+.num {
+  color: $dark-grey;
+  // background-color: $medium-duck;
+  padding-right: 5px;
+  padding-left: 8px;
+  margin-right: 5px;
+  height: auto;
+  float: left
+}
+
+.line {
+  clear: both
+}
+
+.line:hover .num {
+background-color: $dark-duck;
+}
+
+.line .text {
+/*    margin-left: 30px*/
+}
+
+.line:hover .text {
+// background-color: $medium-duck;
+}
+
+
+
+.left {
+  width: 20%;
+  min-height: 100vh;
+  float: left;
+  border-right: 1.5px dashed $light-grey;
+  padding: 10px;
+  margin-bottom: -20px
+}
+
+.left p.yellow {
+  margin-bottom: 20px
+}
+
+.left #dir p:before {
+  content: "|";
+  color: $blue;
+}
+
+.left .inner {
+  margin-left: 20px
+}
+
+.left .inner.hidden {
+  display: none
+}
+
+@media screen and (max-width: 1200px) {
+  .left {
+      width: 30%
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .left {
+      width: 40%
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .left {
+      width: 40%
+  }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .left {
+      padding-bottom: 40px
+  }
+}
+
+
+.right {
+  display: block;
+  width: 75%;
+  float: left;
+  padding: 10px;
+  position: relative;
+  min-height: 100%;
+  margin-bottom: -20px
+}
+
+@media screen and (max-width: 1200px) {
+  .right {
+      width: 65%
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .right {
+      width: 55%
+  }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .right {
+      padding-bottom: 40px
+  }
+}
+
+#footer {
+  width: 100%;
+  height: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border-left: 2px solid $yellow;
+  border-right: 2px solid $yellow;
+}
+
+.status-bar {
+  height: 20px
+}
+
+.status-bar.bar-left {
+  width: 20%;
+  left: 0;
+  position: relative;
+  float: left;
+  border-right: 1.5px dashed $light-grey;
+  // background-color: $medium-duck;
+}
+
+@media screen and (max-width: 1200px) {
+  .status-bar.bar-left {
+      width: 30%
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .status-bar.bar-left {
+      width: 40%
+  }
+}
+
+.status-bar.bar-left.inactive {
+  // background-color: $dark-duck;
+}
+
+.status-bar.bar-right {
+  position: relative;
+  /* display: none; */
+  // background-color: $medium-duck;
+  float: left;
+  width: 80%
+}
+
+@media screen and (max-width: 1200px) {
+  .status-bar.bar-right {
+      width: 70%
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .status-bar.bar-right {
+      width: 60%
+  }
+}
+
+.bar {
+  background: $teal;
+  float: left;
+  padding: 0 10px;
+  z-index: 999;
+  height: 20px;
+  font-size: 13px;
+  color: #FCF5E3
+}
+
+.bar.inactive {
+  background: $dark-teal;
+}
+
+.bar.branch {
+margin-left: -10px;
+padding-left: 20px;
+  background: $dark-teal;
+}
+
+.branch-symbol {
+  background: $dark-teal;
+  font-size: 10px
+}
+
+.triangle {
+  display: inline-block;
+  float: left;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid $teal;
+  position: relative
+}
+
+.triangle.inactive {
+  border-left: 9px solid $dark-teal;
+}
+
+
+.readme-toggle {
+  color: $medium-grey;
+  cursor: pointer;
+}
+
+.bar-right,
+.right {
+  opacity: 0;
+  pointer-events: none;
+}
+.bar-right.active,
+.right.active {
+  opacity: 1;
+  pointer-events: all;
+}

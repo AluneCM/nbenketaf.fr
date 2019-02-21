@@ -6,7 +6,7 @@
     <meta name="description" content="Freelance developer - Paris">
     <meta name="keywords" content="nbenketaf, Nabil Benketaf, Freelance, Java Development, Nabil, Benketaf, Paris Developer">
     <title>Nabil Benketaf - Freelance Developer</title>
-    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
     <link href="favicon.ico" rel="icon" type="image/x-icon">
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -18,7 +18,7 @@
       ga('send', 'pageview');
     </script>
   </head>
-  <body>
+  <body class="light-theme">
     <div class="wrap">
       <div class="left">
 	<p class="yellow desktop-toggle">" Press ? for help</p>
@@ -44,7 +44,7 @@
 	</div>
       </div>
       <div class="shrug">
-	<p class="white">may the lambda force be with you...</p>
+	<p class="medium-grey">may the lambda force be with you...</p>
 	<h2>(λ)</h2>
       </div>
       <div class="right">
@@ -62,14 +62,14 @@
 	<div class="line">
 	  <div class="num">&nbsp;3</div>
 	  <div class="text">
-	    <p class="white">Freelance Developer</p>
+	    <p class="medium-grey">Freelance Developer</p>
 	  </div>
 	</div>
 	
 	<div class="line">
 	  <div class="num">&nbsp;4</div>
 	  <div class="text">
-	    <p class="white">Paris, France</p>
+	    <p class="medium-grey">Paris, France</p>
 	  </div>
 	</div>
 	
@@ -80,7 +80,7 @@
 	<div class="line">
 	  <div class="num">&nbsp;6</div>
 	  <div class="text">
-	    <p class="white">Java, Clojure</p>
+	    <p class="medium-grey">Java, Clojure</p>
 	  </div>
 	</div>
 	
@@ -91,7 +91,7 @@
 	<div class="line">
 	  <div class="num">&nbsp;8</div>
 	  <div class="text">
-	    <p class="white"></p>
+	    <p class="medium-grey"></p>
 	  </div>
 	</div>
 	
@@ -116,34 +116,12 @@
 	  <span class="bar bar-active">NORMAL</span><div class="triangle bar-active"></div>
 	  <span class="bar bar-active branch"><span class="branch-symbol"></span>&nbsp;master</span>
 	  <div class="triangle bar-active inactive"></div>
-	  <span class="base01">&nbsp; nbenketaf.fr/README</span>
+	  <span class="text-grey">&nbsp; nbenketaf.fr/README</span>
 	</div>
       </div>
     </div>
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script>
-	$(function(){
-		$('#readme').on('click', function(){
-			$('.right').show();
-			$('.bar-right').show();
-			$('.bar-left').addClass('inactive');
-		});
-		$('.mobile-toggle').on('click', function(){
-			$('.shrug').addClass('slidey');
-		});
-		$(document).keydown(function(e) {
-	        if(e.keyCode == 191) {
-	        	var shrug = $('.shrug');
-	           	shrug.addClass('slidey').delay(8000).queue(function(){
-	           	shrug.removeClass('slidey');
-	           	shrug.dequeue();
-	        });
-	     }
-	});
-	});
-		</script> -->
-		
 		<script>
+
 			const readmeToggler = document.querySelector('.readme-toggle')
 
 			const rightPanel = document.querySelector('.right');
@@ -165,6 +143,12 @@
 					setTimeout(function() {
   					shrug.classList.remove('slidey');
 					}, 8000);
+				} else if(e.keyCode == 117 && document.body.classList.contains('dark-theme')) {
+					document.body.classList.remove('dark-theme');
+					document.body.classList.add('light-theme');
+				} else if(e.keyCode == 117 && document.body.classList.contains('light-theme')) {
+					document.body.classList.remove('light-theme');
+					document.body.classList.add('dark-theme');
 				}
 			})
 		</script>

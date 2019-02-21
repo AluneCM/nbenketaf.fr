@@ -1,0 +1,96 @@
+.shrug {
+  text-align: center;
+  display: none;
+  color: $medium-grey;
+  font-weight: 300;
+  position: fixed;
+  top: -100px;
+  left: 60%;
+  -webkit-transform: translateX(-60%);
+  -moz-transform: translateX(-60%);
+  -ms-transform: translateX(-60%);
+  -o-transform: translateX(-60%);
+  transform: translateX(-60%)
+}
+
+@media screen and (max-width: 1200px) {
+  .shrug {
+      left: 66%
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .shrug {
+      left: 72%
+  }
+}
+
+.shrug h2 {
+  font-size: 40px
+}
+
+@media screen and (max-width: 800px) {
+  .shrug h2 {
+      font-size: 26px
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .shrug h2 {
+      font-size: 12px
+  }
+}
+
+.shrug.slidey {
+  display: block;
+  -webkit-animation: slideDown 10s;
+  -moz-animation: slideDown 10s;
+  -ms-animation: slideDown 10s;
+  -o-animation: slideDown 10s;
+  animation: slideDown 10s
+}
+
+@-webkit-keyframes slideDown {
+  from {
+      top: -20%
+  }
+  to {
+      top: 100%
+  }
+}
+
+@-moz-keyframes slideDown {
+  from {
+      top: -20%
+  }
+  to {
+      top: 100%
+  }
+}
+
+@-ms-keyframes slideDown {
+  from {
+      top: -20%
+  }
+  to {
+      top: 100%
+  }
+}
+
+@-o-keyframes slideDown {
+  from {
+      top: -20%
+  }
+  to {
+      top: 100%
+  }
+}
+
+@keyframes slideDown {
+  from {
+      top: -20%
+  }
+  to {
+      top: 100%
+  }
+}
